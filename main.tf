@@ -4,7 +4,7 @@
  }*/
 
 resource "aws_instance" "web" {
-  provider = aws.us-west-2 
+ 
   /* ami           = data.aws_ami.app_ami.image_id*/
 ami="ami-0cf10cdf9fcd62d37"
   
