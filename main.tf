@@ -6,7 +6,7 @@
 resource "aws_instance" "web" {
  
   /* ami           = data.aws_ami.app_ami.image_id*/
-ami="al2023-ami-2023.3.20240131.0-kernel-6.1-x86_64"
+ami="ami-0277155c3f0ab2930"
   
   instance_type = "t2.micro"
   subnet_id = "subnet-096b141240617b9b8"
