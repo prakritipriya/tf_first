@@ -5,8 +5,8 @@
 
 resource "aws_instance" "web" {
  
-  /* ami           = data.aws_ami.app_ami.image_id*/
-ami="ami-0277155c3f0ab2930"
+   ami= data.aws_ami.app_ami.image_id
+
   
   instance_type = "t2.micro"
   subnet_id = "subnet-096b141240617b9b8"
@@ -15,6 +15,16 @@ ami="ami-0277155c3f0ab2930"
   tags = {
     Name = "HelloWorld"
   }
+}
+
+data "aws_ami" "app_ami" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["al2023-ami-2023.3.20240122.0-kernel-6.1-x86_64"]
+  }
+
 }
 
 
