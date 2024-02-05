@@ -1,7 +1,7 @@
-provider "aws" {
+/*provider "aws" {
      region="us-east-1"
 
- }
+ }*/
 
 resource "aws_instance" "web" {
   provider = aws.us-west-2 
