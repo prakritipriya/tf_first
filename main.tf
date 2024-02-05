@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 ami="ami-0cf10cdf9fcd62d37"
   
   instance_type = "t2.micro"
-  subnet_id = ["subnet-096b141240617b9b8","subnet-0570ef81fe6aea3ae","subnet-0e0427fcb1a51b17f"]
+  subnet_id = "subnet-096b141240617b9b8"
   security_groups=["sg-084371fe3d9b5e452"]
   
   tags = {
