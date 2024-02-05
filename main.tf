@@ -1,8 +1,7 @@
-# provider "aws" {
-#     region="us-east-1"
-#     access_key = "AKIAXYKJXBVJQBSN73QY"
-#     secret_key = "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"
-# }
+provider "aws" {
+     region="us-east-1"
+
+ }
 
 resource "aws_instance" "web" {
   provider = aws.us-west-2 
@@ -30,14 +29,14 @@ ami="ami-0cf10cdf9fcd62d37"
 
 //datasource : to call an ec2 instance
 
-data "aws_ami" "app_ami" {
+/*data "aws_ami" "app_ami" {
 #   instance_alias = "foo" //instance id
 most_recent = true
 filter {
   name="name"
   values = [ "ami-0cf10cdf9fcd62d37" ]
 }
-}
+}*/
 
 # resource "aws_api_gateway_domain_name" "example" {
 #   certificate_arn = aws_acm_certificate_validation.example.certificate_arn
